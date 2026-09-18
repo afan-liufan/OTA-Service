@@ -10,7 +10,7 @@ docker run -d \
   --restart unless-stopped \
   -p 9608:9608 \
   -v ./firmware:/app/firmware \
-  ota-service:latest
+  ota-service:1.1.3
 
 ```
 
@@ -23,7 +23,7 @@ version: '3.8'
 
 services:
   ota-service:
-    image: ota-service:latest
+    image: ota-service:1.1.3
     container_name: ota-server-container
     restart: unless-stopped
     ports:
